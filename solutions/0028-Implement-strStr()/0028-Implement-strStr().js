@@ -16,7 +16,7 @@ var strStr_BF = function (haystack, needle) {
   for (let i = 0, j = 0; i <= (m - n); i++, j = 0) {
     temp = i
     while (haystack[temp] === needle[j] && j < n) {
-      tem++
+      temp++
       j++
     }
     if (j == n) {
