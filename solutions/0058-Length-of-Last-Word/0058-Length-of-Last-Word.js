@@ -8,5 +8,6 @@ var lengthOfLastWord = function (s) {
 }
 console.log(lengthOfLastWord(" "))
 
-
-// return s.length - s.lastIndexOf(' ') - 1
+var lengthOfLastWord = function (s) {
+    return s.length - s.lastIndexOf(' ') - 1
+}
