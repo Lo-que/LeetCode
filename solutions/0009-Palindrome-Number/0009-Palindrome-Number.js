@@ -6,13 +6,13 @@
 var isPalindromeAsAll = function (x) {
   let rev = 0,
     pos = 0,
-    xx = x
+    temp = x
   if (x < 0 || (x % 10 == 0 && x != 0)) return false
   // if(x >=0 && x < 10) return true
-  while (xx != 0) {
-    pos = xx % 10
-    xx = (xx - pos) / 10
-    rev = rev * 10 + pos
+    while (temp != 0) {
+      pos = temp % 10
+      temp = (temp - pos) / 10
+      rev = rev * 10 + pos
   }
   return x === rev
 }

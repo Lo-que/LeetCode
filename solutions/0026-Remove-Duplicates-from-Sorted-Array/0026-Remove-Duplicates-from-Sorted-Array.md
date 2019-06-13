@@ -58,7 +58,7 @@ for (int i = 0; i < len; i++) {
 - 如果不同，则两个指针都向前走一步
 - 当快指针走完整个数组后，慢指针当前的坐标加1就是数组中不同数字的个数
 
-![动画流程](https://github.com/Lo-que/LeetCode/blob/master/assets/images/0026-Remove-Duplicates-from-Sorted-Array.gif)
+![动画流程](https://github.com/Lo-que/LeetCode/blob/master/assets/images/0026-Remove-Duplicates-from-Sorted-Array.gif?raw=true)
 
 **复杂度分析：**
 
