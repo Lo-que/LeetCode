@@ -18,33 +18,20 @@ var isEqual = function (left, right) {
   if (!left || !right) return false
   return (left.val === right.val) && isEqual(left.left, right.right) && isEqual(left.right, right.left)
 }
-var root = {
-  val: 1,
-  right: {
-    val: 2,
-    right: {
-      val: 3,
-      right: null,
-      left: null
-    },
-    left: {
-      val: 4,
-      right: null,
-      left: null
-    }
-  },
-  left: {
-    val: 2,
-    right: {
-      val: 4,
-      right: null,
-      left: null
-    },
-    left: {
-      val: 3,
-      right: null,
-      left: null
-    }
+
+var isSymmetric = function (root) {
+  if (!root) return true
+  let nodeList = []
+  nodeList.push(root.left)
+  nodeList.push(root.right)
+  while (nodeList.length > 0) {
+    let left = nodeList.shift()
+    let right = nodeList.shift()
+    if (!left && !right) continue
+    if (!left || !right) return false
+    if (left.val !== right.val) return false
+    nodeList.push(left.left, right.right)
+    nodeList.push(left.right, right.left)
   }
+  return true
 }
-console.log(isSymmetric(root))
