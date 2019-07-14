@@ -3,7 +3,6 @@
  * @return {number} - a positive integer
  */
 var reverseBits = function(n) {
-  n = n >>> 0
   let i = 32
   let res = 0
   while (i--) {
@@ -11,6 +10,5 @@ var reverseBits = function(n) {
     res += n & 1
     n >>>= 1
   }
-  return res
+  return res >>> 0
 }
-console.log(reverseBits(11111111111111111111111111111101))
