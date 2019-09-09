@@ -3,15 +3,15 @@
  * @return {number}
  */
 var compress = function(chars) {
-  var len = chars.length
+  const len = chars.length
   for (var i = 0, j = 0; j < len; ) {
     chars[i] = chars[j]
-    var temp = j
+    let temp = j
     while (j < len && chars[i] === chars[j]) {
       j++
     }
     i++
-    var dis = j - temp
+    const dis = j - temp
     if (dis > 1) {
       var distance = Array.from('' + dis)
       for (var k = 0; k < distance.length; k++) {
