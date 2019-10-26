@@ -13,11 +13,11 @@ var tree2str = function(t) {
   if (!t) {
     return ''
   }
-  var rightStr = ''
+  let rightStr = ''
   if (t.right) {
     rightStr = `(${tree2str(t.right)})`
   }
-  var leftStr = `(${tree2str(t.left)})`
+  let leftStr = `(${tree2str(t.left)})`
   if (!t.right && leftStr === '()') {
     leftStr = ''
   }
